@@ -1,0 +1,57 @@
+// Matches Procurement's gold secondary action across all roles and table contexts.
+.ant-btn.inbound-row-action,
+.procurement-workspace .ant-btn.inbound-row-action,
+.inbound-detail .ant-btn.inbound-row-action {
+  --row-action-primary: #b49a00;
+  --row-action-primary-hover: #9a8400;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 10px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--row-action-primary);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: none;
+  transition: background-color .15s, color .15s, border-color .15s;
+
+  .ant-btn-icon { margin: 0; font-size: 12px; }
+  &:not(:disabled):not(.ant-btn-loading):hover {
+    background: var(--row-action-primary);
+    border-color: var(--row-action-primary);
+    color: #fff;
+  }
+  &:not(:disabled):not(.ant-btn-loading):active {
+    background: var(--row-action-primary-hover);
+    border-color: var(--row-action-primary-hover);
+    color: #fff;
+  }
+  &.inbound-row-action--primary {
+    background: var(--row-action-primary) !important;
+    border-color: var(--row-action-primary) !important;
+    color: #fff;
+    &:not(:disabled):not(.ant-btn-loading):hover {
+      background: var(--row-action-primary-hover) !important;
+      border-color: var(--row-action-primary-hover) !important;
+    }
+  }
+  &.inbound-row-action--danger {
+    color: #dc2626;
+    border-color: #dc2626;
+    &:not(:disabled):not(.ant-btn-loading):hover,
+    &:not(:disabled):not(.ant-btn-loading):active { background: #dc2626; color: #fff; }
+  }
+  &:focus-visible { outline: 2px solid var(--row-action-primary-hover) !important; outline-offset: 3px; }
+  &:disabled {
+    background: #f1f5f9 !important;
+    border-color: #e2e8f0 !important;
+    color: #94a3b8 !important;
+    cursor: not-allowed;
+  }
+}

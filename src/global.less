@@ -1,0 +1,149 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: thin;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+.ant-pro-sider.ant-layout-sider.ant-pro-sider-fixed {
+  left: unset;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+
+    &-thead>tr,
+    &-tbody>tr {
+
+      >th,
+      >td {
+        white-space: pre;
+
+        >span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.ant-btn-primary {
+  background: #b49900 !important;
+}
+
+.ant-layout-header {
+
+  span,
+  h1 {
+    font-weight: 700;
+  }
+}
+
+.ant-pro-layout .ant-pro-layout-container {
+  min-height: 100svh !important;
+}
+
+
+.ant-page-header-heading-title {
+  color: #e8c915 !important;
+}
+
+.ant-pro-layout-content {
+  background-color: whitesmoke !important;
+}
+
+.ant-pro-page-container {
+  background-color: whitesmoke !important;
+}
+
+.ant-pro-page-container .ant-pro-page-container-children-container {
+  padding-block-start: 8px !important;
+}
+
+#root {
+  background-color: whitesmoke !important;
+}
+
+// REACH 11/18/2024
+.ant-tree-treenode::before {
+  border-radius: 5px;
+}
+
+.my-checkcard-so .ant-pro-checkcard-content {
+  padding: 5px !important;
+  margin: 0 !important;
+  width: 40;
+}
+
+.my-checkcard-so .ant-pro-checkcard {
+  margin-block-end: 0 !important;
+  width: fit-content;
+  padding: 0 8px;
+  margin-inline-end: 2px;
+}
+
+.thin-scrollbar-cust .ant-table-content {
+  scrollbar-width: thin;
+  /* Firefox */
+  // scrollbar-color: #eaeaea transparent;
+}
+
+/* Chrome / Edge / Safari */
+.thin-scrollbar-cust .ant-table-content::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.thin-scrollbar-cust .ant-table-content::-webkit-scrollbar-thumb {
+  background-color: #eaeaea;
+  border-radius: 6px;
+}
+
+/* Responsive Radio Group */
+.radio-group-desktop {
+  display: inline-block;
+}
+
+.radio-group-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .radio-group-desktop {
+    display: none;
+  }
+  
+  .radio-group-mobile {
+    display: inline-block;
+  }
+}
